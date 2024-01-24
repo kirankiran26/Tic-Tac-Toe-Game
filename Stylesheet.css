@@ -27,9 +27,9 @@ body {
     width: 18vmin;
     border-radius: 1rem;
     border: none;
-    background-color: 0 0 1rem rgba(0, 0, 0, 0.2);
     font-size: 8vmin;
    color: red;
+   background-color: #ffffc7;
 }
 .resetbtn{
     height: 50px;
