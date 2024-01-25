@@ -39,3 +39,18 @@ body {
     font-size: 1rem;
     border-radius: 1rem;
 }
+.newgamebt{
+    height: 50px;
+    width: 90px;
+    color: black;
+    background-color: yellow;
+    font-size: 1rem;
+    border-radius: 1rem;
+}
+#message{
+    color:#ffffc7;
+    font-size: 8vmin;
+}
+.hide{
+    display: none;
+}
