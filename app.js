@@ -2,7 +2,7 @@ let boxes=document.querySelectorAll(".box");
 let resetbtn=document.querySelector(".resetbtn");
 let congbut=document.querySelector("#message");
 let messagecont=document.querySelector(".messagecont");
-let newgamebut=document.querySelector(".newgamebt")
+let newgamebut=document.querySelector(".newgamebt");
 let xturn=true;
 const winingpatt=[
     [0,3,6],
@@ -18,7 +18,7 @@ boxes.forEach((box)=> {
    box.addEventListener("click",()=> {
    if (count==9) {
     congbut.innerText="No Winner";
-    messagecont.classList.remove("hide")
+    messagecont.classList.remove("hide");
    }
     if (xturn) {
          box.innerText="X";
