@@ -12,16 +12,20 @@ const winingpatt=[
     [2,5,8],
     [3,4,5],
     [6,7,8],
+    [2,4,6],
 ];
 let count=1;
 boxes.forEach((box)=> {
    box.addEventListener("click",()=> {
+    console.log(count);
    if (count==9) {
     congbut.innerText="No Winner";
+    count=0;
     messagecont.classList.remove("hide");
    }
     if (xturn) {
          box.innerText="X";
+         box.style.color="black";
     }
     else {
         box.innerText="O";
@@ -64,6 +68,7 @@ const enabledbut=()=>{
 }
 const resetGame=()=> {
     xturn=true;
+    count=1;
     enabledbut();
    messagecont.classList.add("hide")
 };
