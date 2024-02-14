@@ -2,7 +2,7 @@ let boxes=document.querySelectorAll(".box");
 let resetbtn=document.querySelector(".resetbtn");
 let congbut=document.querySelector("#message");
 let messagecont=document.querySelector(".messagecont");
-let newgamebut=document.querySelector(".newgamebt");
+let newgamebtn=document.getElementById("newgamebtn");
 let xturn=true;
 const winingpatt=[
     [0,3,6],
@@ -17,11 +17,8 @@ const winingpatt=[
 let count=1;
 boxes.forEach((box)=> {
    box.addEventListener("click",()=> {
-    console.log(count);
    if (count==9) {
-    congbut.innerText="No Winner";
-    count=0;
-    messagecont.classList.remove("hide");
+    drawGame();
    }
     if (xturn) {
          box.innerText="X";
@@ -36,8 +33,13 @@ boxes.forEach((box)=> {
     xturn=!xturn;
     box.disabled=true;
    })
-   
 });
+const drawGame=()=> {
+    congbut.innerText="No Winner";
+    count=0;
+    messagecont.classList.remove("hide");
+    resetbtn.classList.add("hide")
+}
 const winnerchequing=()=>{
     for (let patten of winingpatt) {
        let posval1=boxes[patten[0]].innerText;
@@ -51,7 +53,8 @@ const winnerchequing=()=>{
     }
 }
 const printingwinnername=(winner)=>{
-    congbut.innerText=`Congrajulations ${winner}`;
+    resetbtn.classList.add("hide")
+    congbut.innerText=`congrajulations winner is  ${winner}`;
     messagecont.classList.remove("hide");
     disabledbut();
 }
@@ -70,7 +73,15 @@ const resetGame=()=> {
     xturn=true;
     count=1;
     enabledbut();
-   messagecont.classList.add("hide")
+   messagecont.classList.add("hide");
 };
+const newGame=()=>{
+    resetbtn.classList.remove("hide");
+    messagecont.classList.add("hide")
+    xturn=true;
+    count=1;
+    enabledbut();
+   
+}
 resetbtn.addEventListener("click",resetGame);
-newgamebut.addEventListener("click",resetGame);
+newgamebtn.addEventListener("click",newGame)

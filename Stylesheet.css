@@ -6,9 +6,8 @@ body {
     background-color: #548687;
     text-align: center;
 }
-
 .container{
-    height: 70vh;
+    height: 65vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,17 +33,18 @@ body {
 }
 .resetbtn{
     height: 50px;
-    width: 70px;
+    width: auto;
     color: black;
     background-color: yellow;
     font-size: 1rem;
     border-radius: 1rem;
 }
-.newgamebt{
+#newgamebtn{
+    margin-top: 20px;
     height: 50px;
-    width: 90px;
+    width: 95px;
     color: black;
-    background-color: yellow;
+    background-color:lightblue;
     font-size: 1rem;
     border-radius: 1rem;
 }
